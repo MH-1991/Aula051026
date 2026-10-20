@@ -1,5 +1,4 @@
 <?php
-
 class Carro{
     //Atributos do carro
     private $marca;
@@ -14,7 +13,6 @@ class Carro{
         $this->cor = $cor;
         $this->ano = $ano;
     }
-
     //metodos do Carro
     public function acelerar($velocidade){
         $this->VelAtual += $velocidade;
@@ -46,10 +44,11 @@ class Carro{
         $this->ano = $ano;
     }
     public function getVelAtual(){
-        return $this->ano;
+        return $this->VelAtual;
     }
-    public function setVelAtual($ano){
-        $this->ano = $ano;
+    public function setVelAtual($VelAtual){
+        $this->VelAtual = $VelAtual;
+    }
 }
 
 $CarroJoao = new Carro("Volkswagen", "Polo", "Branca", 2021);
@@ -57,8 +56,9 @@ $CarroJoaquim = new Carro("Ferrari", "Diablo", "Vermelho", 2015);
 
 echo "Marca: ".$CarroJoao->getMarca()."<br>;
 echo "Modelo: ".$CarroJoao->getModelo()."<br>;
-echo "Cor: ".$CarroJoao->getCor()."<br>;
 echo "Ano: ".$CarroJoao->getAno()."<br>;
+echo "Cor: ".$CarroJoao->getCor()."<br>;
 $CarroJoao->acelerar(50);
 $CarroJoao->acelerar(30);
 echo "Velocidade: ".$CarroJoao->getVelAtual()."<br>;
+?>
