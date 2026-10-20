@@ -23,7 +23,7 @@ class Carro{
         return $this->marca;
     }
     public function setMarca($marca){
-        $this->marca = $marca
+        $this->marca = $marca;
     }
     public function getModelo(){
         return $this->modelo;
@@ -54,11 +54,11 @@ class Carro{
 $CarroJoao = new Carro("Volkswagen", "Polo", "Branca", 2021);
 $CarroJoaquim = new Carro("Ferrari", "Diablo", "Vermelho", 2015);
 
-echo "Marca: ".$CarroJoao->getMarca()."<br>;
-echo "Modelo: ".$CarroJoao->getModelo()."<br>;
-echo "Ano: ".$CarroJoao->getAno()."<br>;
-echo "Cor: ".$CarroJoao->getCor()."<br>;
+echo "Marca: ".$CarroJoao->getMarca()."<br>";
+echo "Modelo: ".$CarroJoao->getModelo()."<br>";
+echo "Ano: ".$CarroJoao->getAno()."<br>";
+echo "Cor: ".$CarroJoao->getCor()."<br>";
 $CarroJoao->acelerar(50);
 $CarroJoao->acelerar(30);
-echo "Velocidade: ".$CarroJoao->getVelAtual()."<br>;
+echo "Velocidade: ".$CarroJoao->getVelAtual()."<br>";
 ?>
