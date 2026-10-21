@@ -85,10 +85,10 @@ $CarroJoao->acelerar(30);
 echo "Velocidade: ".$CarroJoao->getVelAtual()."<br>";
 //-----------------------------------------------------------------
 $CarroDanilo = new CarroEsportivo("Fiat", "Palio", "Amarelo Patrola", 2013, true);
-echo "Marca: ".$CarroJoao->getMarca()."<br>";
-echo "Modelo: ".$CarroJoao->getModelo()."<br>";
-echo "Ano: ".$CarroJoao->getAno()."<br>";
-echo "Cor: ".$CarroJoao->getCor()."<br>";
+echo "Marca: ".$CarroDanoilo->getMarca()."<br>";
+echo "Modelo: ".$CarroDanilo->getModelo()."<br>";
+echo "Ano: ".$CarroDanilo->getAno()."<br>";
+echo "Cor: ".$CarroDanilo->getCor()."<br>";
 echo "Tem Aerofolio? ".$CarroDanilo->getAerofolio()."<br>";
 $CarroDanilo->acelerar(100);
 $CarroDanilo->activarTurbo();
