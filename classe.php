@@ -51,6 +51,24 @@ class Carro{
     }
 }
 
+class CarroEsportivo extends Carro{
+    private $aerofolio;
+
+    public function __construct($marca, $modelo, $ano, $cor, $aerofolio){
+        parent;;__construct($marca,$modelo,$cor,$ano);
+        $this->aerofolio = $aerofolio;
+    }
+
+    public function activarTurbo(){
+        $this->acelerar(100);
+        echo "psss ".$this->getVelAtual." km/h";
+    }
+    public function getAerofolio($aerofolio){
+        $this->aerofolio = $aerofolio;
+    }
+
+}
+
 $CarroJoao = new Carro("Volkswagen", "Polo", "Branca", 2021);
 $CarroJoaquim = new Carro("Ferrari", "Diablo", "Vermelho", 2015);
 
