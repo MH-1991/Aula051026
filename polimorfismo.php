@@ -42,9 +42,9 @@ class Gato extends Animal{
 $Leao = new Animal('Leão');
 $Leao->fazerSom();
 
-$MeuCachorro = new Animal('lulu da pomerania');
+$MeuCachorro = new Cachorro('lulu da pomerania');
 $MeuCachorro->fazerSom();
 
-$MeuGato = new Animal('Vira-Lata');
+$MeuGato = new Gato('Vira-Lata');
 $MeuGato->fazerSom();
 ?>
