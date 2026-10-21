@@ -82,7 +82,7 @@ echo "Ano: ".$CarroJoao->getAno()."<br>";
 echo "Cor: ".$CarroJoao->getCor()."<br>";
 $CarroJoao->acelerar(50);
 $CarroJoao->acelerar(30);
-echo "Velocidade: ".$CarroJoao->getVelAtual()."<br>";
+echo "Velocidade: ".$CarroJoao->getVelAtual()."<br><br>";
 //-----------------------------------------------------------------
 $CarroDanilo = new CarroEsportivo("Fiat", "Palio", "Amarelo Patrola", 2013, true);
 echo "Marca: ".$CarroDanilo->getMarca()."<br>";
