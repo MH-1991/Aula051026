@@ -1,19 +1,21 @@
 <?php
+//lembrando que sempre tem que abrir o xampp e executar-lo, apertar no admin e procurar a pasta do arquivo que estao escrevendo.
+//dai ele abrir praticamente no site
 class Carro{
-    //Atributos do carro
+    //Atributos do carro (exemplo: quais é as categorias do carro)
     private $marca;
     private $modelo;
     private $cor;
     private $ano;
     private $VelAtual = 0;
-    //Contrutor da classe
+    //Contrutor da classe (aqui praticamente é a programação do que você quer ver do carro no site)
     public function __construct($marca, $modelo, $cor, $ano, ){
         $this->marca = $marca;
         $this->modelo = $modelo;
         $this->cor = $cor;
         $this->ano = $ano;
     }
-    //metodos do Carro
+    //metodos do Carro (como ele faz kkkk)
     public function acelerar($velocidade){
         $this->VelAtual += $velocidade;
         echo "Vruuum! Velocidade: ".$this->VelAtual." km/h<br>";
@@ -53,17 +55,19 @@ class Carro{
 
 class CarroEsportivo extends Carro{
     private $aerofolio;
-
-    public function __construct($marca, $modelo, $ano, $cor, $aerofolio){
-        parent;;__construct($marca,$modelo,$cor,$ano);
+    public function __construct($marca,$modelo,$ano,$cor,$aerofolio){
+        parent::__construct($marca,$modelo,$ano,$cor);
         $this->aerofolio = $aerofolio;
     }
 
     public function activarTurbo(){
         $this->acelerar(100);
-        echo "psss ".$this->getVelAtual." km/h";
+        echo "psss ".$this->getVelAtual()." km/h";
     }
-    public function getAerofolio($aerofolio){
+    public function getAerofolio(){
+        return $this->aerofolio;
+    }
+    public function setAerofolio($aerofolio){
         $this->aerofolio = $aerofolio;
     }
 
@@ -79,4 +83,14 @@ echo "Cor: ".$CarroJoao->getCor()."<br>";
 $CarroJoao->acelerar(50);
 $CarroJoao->acelerar(30);
 echo "Velocidade: ".$CarroJoao->getVelAtual()."<br>";
+//-----------------------------------------------------------------
+$CarroDanilo = new CarroEsportivo("Fiat", "Palio", "Amarelo Patrola", 2013, true);
+echo "Marca: ".$CarroJoao->getMarca()."<br>";
+echo "Modelo: ".$CarroJoao->getModelo()."<br>";
+echo "Ano: ".$CarroJoao->getAno()."<br>";
+echo "Cor: ".$CarroJoao->getCor()."<br>";
+echo "Tem Aerofolio? ".$CarroDanilo->getAerofolio()."<br>";
+$CarroDanilo->acelerar(100);
+$CarroDanilo->activarTurbo();
+echo "<br>Velocidade: ".$CarroDanilo->getVelAtual()."<br>";
 ?>
