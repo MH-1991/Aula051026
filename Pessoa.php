@@ -3,29 +3,28 @@
 class Pessoa{
     private $nome;
     private $idade;
-//chamar a função nome e idade
-public function __construct ($nome, $idade,){
-    $this->nome =$nome;
-    $this->idade =$idade;
-}
-//tentar ver se funciona o chamado
+
+    public function __construct ($nome, $idade,){
+        $this->nome = $nome;
+        $this->idade = $idade;
+    }
+
 public function getNome(){
     return $this->nome;
-}
-public function setNome(){
+    }
+public function setNome($nome){
     $this->nome = $nome;
-}
+    }
 public function getIdade(){
     return $this->idade;
-}
-public function setIdade(){
+    }
+public function setIdade($idade){
     $this->idade = $idade;
+    }
 }
 
-}
-
-$PessoaDaniela = new Pessoa("Daniela Amparo," 24);
-$PessoaMichael = new Pessoa("Michael Antonio,"34);
+$PessoaDaniela = new Pessoa("Daniela Amparo", 24);
+$PessoaMichael = new Pessoa("Michael Antonio", 34);
 
 echo "Nome: ".$PessoaDaniela->getNome()."<br>";
 echo "Idade: ".$PessoaDaniela->getIdade()."<br><br>";
